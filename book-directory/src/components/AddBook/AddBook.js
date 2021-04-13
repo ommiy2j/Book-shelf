@@ -16,7 +16,7 @@ const AddBook = ({ addPop, closeAddBook }) => {
 		formdata.append('image', image);
 		formdata.append('details', details);
 
-		fetch('http://localhost:8080/book/addbook', {
+		fetch('https://bookshelf124.herokuapp.com/book/addbook', {
 			method: 'POST',
 			body: formdata,
 			headers: {

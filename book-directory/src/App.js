@@ -24,7 +24,7 @@ function App () {
 
 	const logInHandler = (e, data) => {
 		e.preventDefault();
-		fetch('http://localhost:8080/auth/login', {
+		fetch('https://bookshelf124.herokuapp.com/auth/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ function App () {
 
 	const responseSuccessGoogle = (response) => {
 		// console.log(response);
-		fetch('http://localhost:8080/auth/googlelogin', {
+		fetch('https://bookshelf124.herokuapp.com/auth/googlelogin', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -107,7 +107,7 @@ function App () {
 
 	const signUpJHandler = async (e, data) => {
 		e.preventDefault();
-		await fetch('http://localhost:8080/auth/signup', {
+		await fetch('https://bookshelf124.herokuapp.com/auth/signup', {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json'

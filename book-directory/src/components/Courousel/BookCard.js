@@ -16,7 +16,7 @@ const Card = ({ book }) => {
 	const [ loading, setLoading ] = useState(false);
 	const addlike = (liked) => {
 		setLoading(true);
-		fetch(`http://localhost:8080/book/showbooks/bookdetails/liked/${book._id}`, {
+		fetch(`https://bookshelf124.herokuapp.com/book/showbooks/bookdetails/liked/${book._id}`, {
 			method: 'PUT',
 			body: JSON.stringify({
 				likecount: liked

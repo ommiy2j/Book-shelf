@@ -8,7 +8,7 @@ const TopUsers = () => {
 	const [ users, setusers ] = useState([]);
 	const [ loading, setLoading ] = useState(true);
 	useEffect(() => {
-		fetch('http://localhost:8080/users/allusers')
+		fetch('https://bookshelf124.herokuapp.com/users/allusers')
 			.then((res) => {
 				return res.json();
 			})

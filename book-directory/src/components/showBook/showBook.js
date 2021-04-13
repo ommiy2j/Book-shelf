@@ -22,7 +22,7 @@ const ShowBook = ({ name, author, details }) => {
 	};
 	useEffect(
 		() => {
-			fetch(`http://localhost:8080/book/showbooks?page=${page}`, {
+			fetch(`https://bookshelf124.herokuapp.com/book/showbooks?page=${page}`, {
 				headers: {
 					Authorization: 'Bearer' + localStorage.getItem('token')
 				}

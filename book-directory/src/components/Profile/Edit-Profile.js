@@ -59,7 +59,7 @@ const EditProfile = (props) => {
 		formData.append('githubUrl', githubUrl);
 		formData.append('skills', skills);
 
-		fetch('http://localhost:8080/profile/' + userId, {
+		fetch('https://bookshelf124.herokuapp.com/profile/' + userId, {
 			method: 'PUT',
 			headers: {
 				Authorization: 'Bearer' + localStorage.getItem('token')

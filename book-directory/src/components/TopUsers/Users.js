@@ -13,7 +13,7 @@ const Users = ({ user }) => {
 			if (user.profile.image.startsWith('https')) {
 				setImage(user.profile.image);
 			} else {
-				setImage('http://localhost:8080' + user.profile.image);
+				setImage('https://bookshelf124.herokuapp.com' + user.profile.image);
 			}
 		} else {
 			setImage(placeholder);

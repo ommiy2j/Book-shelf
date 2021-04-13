@@ -8,7 +8,7 @@ function BookDetails (props) {
     const [bookDetails, setbookDetails] = useState({});
     const [image, setImage] = useState('');
 	const showDetails = () => {
-		fetch(`http://localhost:8080/book/showbooks/bookdetails/${bookId}`, {
+		fetch(`https://bookshelf124.herokuapp.com/book/showbooks/bookdetails/${bookId}`, {
 			headers: {
 				Authorization: 'Bearer' + localStorage.getItem('token')
 			}
@@ -30,7 +30,7 @@ function BookDetails (props) {
 		<div>
 			<div className='book-details-container'>
 				<div className='book-image2'>
-                <img src={image ? `http://localhost:8080${image}` : fakePlaceholder} alt='' />
+                <img src={image ? `https://bookshelf124.herokuapp.com${image}` : fakePlaceholder} alt='' />
                 </div>
                 <div className='book-details' >
                     <div className="book-head">

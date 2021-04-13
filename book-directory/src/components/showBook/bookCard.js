@@ -13,7 +13,7 @@ const BookCard = (props) => {
 	const { image, bookId, name, author, details } = props;
 	const addlike = (liked) => {
 		setLoading(true);
-		fetch(`http://localhost:8080/book/showbooks/bookdetails/liked/${bookId}`, {
+		fetch(`https://bookshelf124.herokuapp.com/book/showbooks/bookdetails/liked/${bookId}`, {
 			method: 'PUT',
 			body: JSON.stringify({
 				likecount: liked
@@ -48,7 +48,7 @@ const BookCard = (props) => {
 		<div className='book-card'>
 			<div class='book-container2'>
 				<div class='book-image'>
-					<img src={image ? `http://localhost:8080${image}` : fakePlaceholder} alt='' />
+					<img src={image ? `https://bookshelf124.herokuapp.com${image}` : fakePlaceholder} alt='' />
 				</div>
 				<div className='book-content-2'>
 					<div className='book-title'>{name}</div>

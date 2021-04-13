@@ -20,7 +20,7 @@ const Profile = () => {
 	const userId = localStorage.getItem('userId');
 	const showProfile = () => {
 		
-		fetch('http://localhost:8080/profile/' + userId, {
+		fetch('https://bookshelf124.herokuapp.com/profile/' + userId, {
 			method: 'GET',
 			headers: {
 				Authorization: 'Bearer' + localStorage.getItem('token'),
@@ -45,7 +45,7 @@ const Profile = () => {
 				if (result.image.startsWith('https')) {
 					setProfileImage(result.image);
 				} else {
-					setProfileImage('http://localhost:8080' + result.image);
+					setProfileImage('https://bookshelf124.herokuapp.com' + result.image);
 				}
 			})
 			.catch((err) => {
