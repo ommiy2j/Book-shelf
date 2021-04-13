@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import book from '../../../../model/book';
 import fakePlaceholder from '../../assets/books/fakeBook.png';
 
 function BookDetails (props) {
@@ -23,6 +22,7 @@ function BookDetails (props) {
 	};
 	useEffect(() => {
 		showDetails();
+		console.log(bookDetails);
 	}, []);
 	return (
 		<div>
