@@ -491,7 +491,6 @@ body::-webkit-scrollbar-thumb {
 		font-size: 0.9rem;
 		color: #000;
 		margin-top: 60px;
-		border: 1px solid;
 	}
 	.book-desc p{
 		word-spacing: 6px;
