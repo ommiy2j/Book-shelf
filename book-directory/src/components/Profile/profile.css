@@ -557,7 +557,7 @@
 	.input-wrapper input {
 		font-size: 13px;
 		border: 0;
-		width: 210px;
+		width: 230px;
 		height: 25px;
 	}
 	
@@ -678,5 +678,36 @@
 		top: 60px;
 		width: 100%;
 		justify-content: center;
+	}
+	.edit-form {
+		width: 100%;
+		min-height: 1200px;
+		top: 0;
+		box-shadow: none;
+		border: none;
+		background: #132743;
+		left: 0%;
+		transform: translate(0%);
+	}
+	.input-wrapper{
+		margin: 10px 25px;
+	}
+	.input-wrapper input{
+		font-size: 13px;
+		border: 0;
+		width: 300px;
+		height: 25px;
+	}
+	.country {
+		width: 300px;
+	}
+	.skills .skill-show {
+		margin-left: 0;
+	}
+	.skill-show p{
+		margin: 10px 25px;
+	}
+	.skill-show .all-skills{
+		margin: 10px 25px;
 	}
 }
