@@ -1,0 +1,244 @@
+.nav_container {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: #ededed;
+	z-index: 9999;
+}
+.mainNav {
+	width: 88%;
+	height: 100%;
+	margin: 0 auto;
+	/* border: 1px solid; */
+	display: flex;
+	align-items: center;
+	color: #373449;
+	justify-content: space-between;
+}
+.logo h3 {
+	color: #373449;
+	font-size: 1.4rem;
+	cursor: pointer;
+	user-select: none;
+}
+.main-heading {
+	font-family: cursive;
+}
+.loginNav {
+	width: 100%;
+	font-size: 1.1rem;
+}
+.loginNav .nav {
+	margin: 0 10px;
+	padding: 10px 20px;
+	color: #373449;
+	text-decoration: none;
+}
+.loginNav .navIcon > path {
+	color: #373449;
+}
+.loginNav .nav:hover .navIcon > path {
+	color: rgb(8, 211, 238);
+}
+.loginNav .active .navIcon > path {
+	color: rgb(255, 255, 255);
+}
+.authNav {
+	width: 100%;
+	font-size: 1.1rem;
+}
+.authNav .nav:hover {
+	/* border-bottom: 2px solid #eee; */
+	color: rgb(1, 172, 143);
+}
+.authNav .nav {
+	margin: 0 10px;
+	padding: 3px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+/* .authNav .active {
+	font-size: 1.5rem;
+	color: rgb(0, 189, 129);
+	
+	background: none;
+} */
+.authNav a {
+	cursor: pointer;
+}
+.authNav .navIcon > path {
+	color: #181515;
+	transition: all 0.4s ease;
+}
+.authNav .nav:hover .navIcon > path {
+	color: rgb(8, 146, 238);
+}
+.authNav .active .navIcon > path {
+	color: rgb(8, 211, 238);
+}
+.loginNav .active .navIcon > path {
+	color: rgb(8, 211, 238);
+}
+
+/* .container-nav {
+	width: 100%;
+	height: 60px;
+	background: #1ab188;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+.navbar {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mainNav {
+	width: 60px;
+	color: rgb(3, 3, 3);
+	text-decoration: none;
+}
+.nav {
+	text-decoration: none;
+	padding: 5px 10px;
+	color: black;
+}
+.nav:hover {
+	color: #6f42c1 !important;
+	outline: none !important;
+	text-decoration: none !important;
+}
+.authNav {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+}
+.active {
+	font-weight: bold !important;
+	text-decoration: underline;
+} */
+
+.nav_container-mobile {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	z-index: 99;
+	background: #295939;
+	display: none;
+}
+.head-mob {
+	text-align: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f5f4f4;
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+.mobile-nav-items {
+	display: block;
+	width: fit-content;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	background: #f8f1f1;
+	transform: scale(1);
+	padding: 20px 50px;
+	transition: 0.3s linear;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	z-index: 99;
+	
+}
+.triangle {
+	position: absolute;
+	top: -10px;
+	width: 20px;
+	height: 10px;
+	right: 1px;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid #f8f1f1;
+}
+.mobile-nav-items ul {
+	list-style: none;
+}
+.mobile-nav-items ul li {
+	display: block;
+	padding: 10px 5px;
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.nav-mob {
+	text-decoration: none;
+	color: #663f3f;
+	transition: 0.5s ease;
+}
+.nav-mob:hover {
+	color: #184d47;
+}
+.mobile-nav-items .active {
+	color: #1fd480;
+}
+.mobile-nav-items-hidden {
+	transform: scale(0);
+	display: none;
+}
+.lines,
+.cross {
+	position: absolute;
+	right: 50px;
+	top: 5px;
+	width: 40px;
+	cursor: pointer;
+	height: 40px;
+}
+.lines span,
+.cross span {
+	width: 25px;
+	height: 3px;
+	background: white;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px/2;
+	margin-top: -3px/2;
+	transition: transform 200ms;
+}
+
+.lines span:nth-child(1) {
+	transform: translate3d(0, -8px, 0);
+}
+.lines span:nth-child(2) {
+	transform: translate3d(0, 0, 0);
+}
+.lines span:nth-child(3) {
+	transform: translate3d(0, 8px, 0);
+}
+.cross span:nth-child(1) {
+	transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.cross span:nth-child(2) {
+	transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.cross span:nth-child(3) {
+	transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+@media (max-width: 760px) {
+	.nav_container {
+		display: none;
+	}
+	.nav_container-mobile{
+		display: block;
+	}
+	
+}

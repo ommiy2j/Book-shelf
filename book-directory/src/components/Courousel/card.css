@@ -1,0 +1,172 @@
+.b-card {
+	width: 90%;
+	height: 260px;
+	margin: 0 30px;
+	background: rgb(207, 117, 117);
+	font-size: 5rem;
+	overflow: visible;
+	display: flex;
+	justify-content: space-between;
+	cursor: grab;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+		'Helvetica Neue', sans-serif;
+}
+.corousel {
+	margin-top: 20px;
+}
+.image {
+	width: 180px;
+	height: 100%;
+	border-radius: 2px;
+	margin: 20px 30px 0 80px;
+	box-shadow: -2px 6px 19px 0px #7f818e;
+	transition: 0.3s ease;
+}
+.image:hover {
+	transform: scale(1.03);
+}
+.image img {
+	width: 100%;
+	height: 100%;
+}
+
+/* style{
+    background: #fbadaf;
+    background: #a4e0eb;
+    background-color: #edb9d6;
+    background-color: #fdca95;
+    background-color: #cbb5e2;
+} */
+
+.book-content {
+	width: 72%;
+	overflow: hidden;
+	padding-top: 30px;
+	overflow: hidden;
+}
+.book-content .book-title {
+	font-size: 1.3rem;
+	color: aliceblue;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #ffffff;
+	font-weight: 600;
+}
+.book-content .book-author {
+	margin-top: 3px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #ffffff;
+}
+
+.book-content .book-details {
+	margin-top: 20px;
+	font-size: 14px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	color: #ffffff;
+}
+.rate {
+	font-size: 1.4rem;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.rate-book-false > path {
+	color: #ffffff;
+}
+.rate-book-true > path {
+	color: #fd07b3;
+}
+.book-see {
+	margin-top: 25px;
+	text-align: center;
+	background-color: #fff;
+	padding: 8px;
+	font-size: 14px;
+	width: 160px;
+	border-radius: 20px;
+}
+.book-see:active {
+	background: rgb(247, 136, 136);
+	color: #ffffff;
+}
+.book-content .book-see .book-details-link {
+	width: 160px;
+	height: 100%;
+}
+
+@media (max-width: 550px) {
+	.b-card {
+		width: 98%;
+		height: 200px;
+		margin: 35px 0px;
+		font-size: 1rem;
+		overflow: visible;
+		display: flex;
+		justify-content: space-between;
+		cursor: grab;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+			'Helvetica Neue', sans-serif;
+	}
+	.corousel {
+		margin-top: 0px;
+	}
+	.image {
+		width: 130px;
+		border-radius: 2px;
+		margin: 20px 15px 0 10px;
+		height: 80%;
+	}
+
+
+	.book-content {
+		width: 72%;
+		overflow: hidden;
+		padding-top: 10px;
+		overflow: hidden;
+	}
+	.book-content .book-title {
+		font-size: 1rem;
+	}
+	.book-content .book-author {
+		margin-top: 3px;
+		margin-left: 10px;
+		font-size: 10px;
+	}
+
+	.book-content .book-details {
+		margin-top: 10px;
+		font-size: 12px;
+		overflow: hidden;
+	}
+	.rate {
+		font-size: 1.3rem;
+		margin-top: 7px;
+	}
+	.rate-book-false > path {
+		color: #ffffff;
+	}
+	.rate-book-true > path {
+		color: #15824b;
+	}
+	.book-see {
+		margin-top: 15px;
+		text-align: center;
+		background-color: #fff;
+		padding: 7px 2px;
+		font-size: 13px;
+		width: 130px;
+		border-radius: 15px;
+	}
+	.book-see:active {
+		background: rgb(247, 136, 136);
+		color: #ffffff;
+	}
+	.book-content .book-see .book-details-link {
+		width: 120px;
+		height: 100%;
+	}
+}

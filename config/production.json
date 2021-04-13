@@ -1,0 +1,6 @@
+{
+    "MONGO_DB_URI": "mongodb+srv://ommiy2j:8294372391omp@cluster0.sfknb.mongodb.net/Book-Directory?retryWrites=true&w=majority",
+    "PORT" : "8080",
+    "JWT_SECRET_TOKEN":"qwertyuioplkjhgfdsa",
+    "google_client_id" : "720469690674-2td5obcfp5p94qvbv6d3q16m4ecagcgc.apps.googleusercontent.com"
+}

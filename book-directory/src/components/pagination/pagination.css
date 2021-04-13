@@ -1,0 +1,23 @@
+.pageination-container {
+	margin: 0 auto;
+}
+.pageination-container ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pageination-container ul li {
+	text-align: center;
+	width: 30px;
+	margin: 10px;
+	padding: 5px;
+	color: black;
+    cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    transition: 0.2s linear;
+}
+.pageination-container ul li:hover{
+    color: blueviolet;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}

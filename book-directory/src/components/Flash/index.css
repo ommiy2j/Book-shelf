@@ -1,0 +1,30 @@
+.alert {
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    right: 4px;
+    top: 45px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    z-index: 1111;
+    }
+    .alert p {
+        color: #fff;
+    margin: 0;
+    }
+    .alert-error {
+    background: lightcoral;
+    }
+    .alert-success {
+    background: rgba(12, 143, 33, 0.795);
+    }
+    .close {
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    }
+    .close strong{
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.384);
+    }
