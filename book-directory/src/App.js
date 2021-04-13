@@ -131,6 +131,7 @@ function App () {
 				return res.json();
 			})
 			.then((result) => {
+				history.push('/login')
 				window.flash('Signed In successfully!', 'success');
 			})
 			.catch((err) => {
