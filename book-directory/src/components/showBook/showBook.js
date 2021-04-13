@@ -56,7 +56,7 @@ const ShowBook = ({ name, author, details }) => {
 			<div className='main-sec'>
 			<TopUsers />
 				<div className='container-fluid'>
-					<h1>Popular books.</h1>
+					<h1>Popular books</h1>
 					<div className='book-container'>
 						{loading ? (
 							<Loader />

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.btn-label,
+.btn-text {
+  font-family: 'Raleway', serif;
+  font-size: 30px;
+  color: green;
+}
+.load {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 5px solid #fff;
+  border-radius: 100%;
+}
+.open {
+  border-top: 5px solid transparent;
+  animation: load-animate infinite linear 1s;
+}
+.btn-label > .load {
+  display: inline-block;
+}
+@-moz-keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

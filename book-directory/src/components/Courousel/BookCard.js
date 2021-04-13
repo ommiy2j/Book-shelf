@@ -28,7 +28,6 @@ const Card = ({ book }) => {
 		})
 			.then((res) => res.json())
 			.then((result) => {
-				console.log(result);
 				setTotalLike(result.totallike);
 				setLoading(false);
 			});
@@ -47,13 +46,12 @@ const Card = ({ book }) => {
 
 	useEffect(() => {
 		setRandomNo(Math.floor(Math.random() * 6));
-		console.log(randomNo);
 	}, []);
 	const styleColor = [ '#fbadaf', '#a4e0eb', '#edb9d6', '#fdca95', '#cbb5e2' ];
 	return (
 		<div className='b-card' style={{ backgroundColor: styleColor[randomNo] }}>
 			<div className='image'>
-				<img src={book.image ? `http://localhost:8080${book.image}` : fakePlaceholder} alt='' />
+				<img src={book.image ? `https://bookshelf124.herokuapp.com${book.image}` : fakePlaceholder} alt='' />
 			</div>
 			<div className='book-content'>
 				<div className='book-title'>{book.name}</div>

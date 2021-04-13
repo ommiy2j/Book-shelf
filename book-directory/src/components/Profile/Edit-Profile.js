@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 import { useHistory, useLocation } from 'react-router-dom';
+import LoadingButton from './loadingButon';
 
 const EditProfile = (props) => {
 	let location = useLocation();
@@ -19,6 +20,7 @@ const EditProfile = (props) => {
 	const [ githubUrl, setGithubUrl ] = useState('');
 	const [ skillInp, setSkillInp ] = useState('');
 	const [ skills, setSkills ] = useState([]);
+	const [loading,setLoading]=useState(false)
 
 	const onFileChange = (e) => {
 		setProfileImage(e.target.files[0]);
@@ -66,21 +68,28 @@ const EditProfile = (props) => {
 			},
 			body: formData
 		})
-			.then((res) => {
-				console.log(res);
-				history.push('/profile');
-				return res.json();
-			})
-			.then((result) => {
-				history.push('/profile');
-				console.log(result);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
+		.then((res) => {
+			if (res.status === 422) {
+				throw new Error('Validation failed.');
+			}
+			if (res.status !== 200 && res.status !== 201) {
+				throw new Error('Could not authenticate you!');
+			}
+			setLoading(false);
+			window.flash('Profile Update Failed!', 'error');
+			return res.json();
+		})
+		.then((result) => {
+			history.push('/profile');
+			setLoading(false);
+			window.flash('Profile Updated!', 'success');
+		})
+		.catch((err) => {
+			window.flash('Profile Update Failed!', 'error');
+		});
 	};
 
-	useEffect(() => {});
+	
 
 	return (
 		<div>
@@ -212,9 +221,13 @@ const EditProfile = (props) => {
 							</div>
 						</div>
 						<div className='submit-btn'>
-							<button className='profile-update-btn btn' onClick={updateProfile}>
-								Update
-							</button>
+							{loading ? (
+								<LoadingButton/>
+							) : (
+								<button className='profile-update-btn btn' onClick={updateProfile}>
+									Update
+								</button>
+							)}
 						</div>
 					</div>
 				</div>

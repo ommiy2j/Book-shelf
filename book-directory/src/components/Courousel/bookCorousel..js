@@ -7,7 +7,6 @@ import './card.css';
 const Corousel = () => {
 	const [ books, setbooks ] = useState([]);
 	const getTopBooks = () => {
-		console.log('dfgdfgdfgdfggdg');
 		fetch('https://bookshelf124.herokuapp.com/book/showbooks/bestbooks', {
 			headers: {
 				Authorization: 'Bearer' + localStorage.getItem('token')
@@ -17,7 +16,7 @@ const Corousel = () => {
 				return res.json();
 			})
 			.then((result) => {
-				console.log(result);
+
 				setbooks(result.book);
 			})
 			.catch((err) => {
@@ -27,7 +26,7 @@ const Corousel = () => {
 
 	useEffect(() => {
 		getTopBooks();
-		console.log('book corousoul', books);
+
 	}, []);
 	const breakPoint = [
 		{ width: 500, itemsToShow: 1 },

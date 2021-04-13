@@ -41,9 +41,6 @@ const BookCard = (props) => {
 			setIsLiked(!isLiked);
 		}
 	};
-	useEffect(() => {
-		console.log(liked);
-	}, []);
 	return (
 		<div className='book-card'>
 			<div class='book-container2'>
