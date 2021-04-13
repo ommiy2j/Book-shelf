@@ -78,7 +78,7 @@ const Signup = (props) => {
 					<p className='or'>Or</p>
 					<div>
 						<GoogleLogin
-							clientId='720469690674-2td5obcfp5p94qvbv6d3q16m4ecagcgc.apps.googleusercontent.com'
+							clientId='720469690674-9nfmonfgu4tlrceiag0cvqf793t08vt0.apps.googleusercontent.com'
 							theme='light'
 							className='google-btn-signUp'
 							buttonText='Sign Up With google'
