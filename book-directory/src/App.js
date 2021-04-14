@@ -39,7 +39,7 @@ function App () {
 					throw new Error('Validation failed.');
 				}
 				if (res.status !== 200 && res.status !== 201) {
-					console.log('Error!');
+					
 					throw new Error('Could not authenticate you!');
 				}
 				return res.json();
@@ -80,13 +80,13 @@ function App () {
 					throw new Error('Validation failed.');
 				}
 				if (res.status !== 200 && res.status !== 201) {
-					console.log('Error!');
+				
 					throw new Error('Could not authenticate you!');
 				}
 				return res.json();
 			})
 			.then((result) => {
-				console.log(result, 'hello');
+				
 				setAuth(true);
 				// setCount((prev) => prev + 1);
 				localStorage.setItem('token', result.token);
@@ -158,7 +158,7 @@ function App () {
 		if (!token) {
 			return;
 		}
-		console.log(userName, isLoading);
+		
 		setAuth(true);
 		setUser(userName);
 		setIsLoading(false);
@@ -174,7 +174,7 @@ function App () {
 		const remTime = new Date(new Date(expiryTime).getTime() - new Date().getTime());
 		setAutoLogOut(remTime);
 		authListner();
-		console.log(remTime, expiryTime, auth);
+		
 	});
 
 	return (
