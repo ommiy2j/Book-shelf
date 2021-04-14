@@ -25,7 +25,7 @@ const BookCard = (props) => {
 		})
 			.then((res) => res.json())
 			.then((result) => {
-				console.log(result);
+				
 				setTotalLike(result.totallike);
 				setLoading(false);
 			});

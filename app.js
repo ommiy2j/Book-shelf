@@ -10,6 +10,7 @@ const multer = require('multer');
 const path = require('path');
 const config = require('config');
 const helmet = require('helmet');
+const compression = require('compression');
 
 //MongoDb URI
 const MONGODB_URI = config.get('MONGO_DB_URI');
@@ -52,6 +53,8 @@ app.use('/book', bookRoute);
 app.use('/auth', authRoute);
 app.use('/profile', profileRoute);
 app.use('/users', userController);
+
+app.use(compression());
 
 app.use((err, req, res, next) => {
 	const status = err.statusCode || 500;

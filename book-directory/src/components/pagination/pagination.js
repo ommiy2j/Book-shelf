@@ -3,9 +3,6 @@ import React, { useEffect } from 'react';
 import './pagination.css';
 
 const Pagination = (props) => {
-	// useEffect(() => {
-	// 	console.log(props);
-	// }, []);
 	return (
 		<div>
 			<div className='pageination-container'>

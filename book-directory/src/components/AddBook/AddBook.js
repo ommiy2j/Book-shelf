@@ -24,12 +24,10 @@ const AddBook = ({ addPop, closeAddBook }) => {
 			}
 		})
 			.then((res) => {
-				console.log(res);
 				return res.json();
 			})
 			.then((result) => {
 				window.flash('Book Added!', 'success');
-				console.log(result);
 				clearInputs();
 				closeAddBook();
 			});

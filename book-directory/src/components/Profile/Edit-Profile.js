@@ -26,7 +26,6 @@ const EditProfile = (props) => {
 		setProfileImage(e.target.files[0]);
 		const imgUrl = URL.createObjectURL(e.target.files[0]);
 		setProfileImageUrl(imgUrl);
-		console.log(profImage, profImageUrl);
 	};
 
 	const clearInput = () => {
@@ -37,7 +36,6 @@ const EditProfile = (props) => {
 			console.log('error');
 		} else {
 			skills.push(skillInp);
-			console.log(skills);
 			clearInput();
 		}
 	};

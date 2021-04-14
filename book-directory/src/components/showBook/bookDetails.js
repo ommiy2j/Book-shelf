@@ -15,7 +15,6 @@ function BookDetails (props) {
 				return res.json();
 			})
 			.then((result) => {
-				console.log(result);
 				setbookDetails(result.book);
 				setImage(result.book.image);
 			});
