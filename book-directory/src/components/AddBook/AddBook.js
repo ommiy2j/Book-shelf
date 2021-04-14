@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import './AddBook.css';
+import placeholder from '../../assets/book4.png';
 
 const AddBook = ({ addPop, closeAddBook }) => {
 	const [ bookName, setBookName ] = useState('');
@@ -89,11 +90,7 @@ const AddBook = ({ addPop, closeAddBook }) => {
 						</div>
 						<div className='wrapper'>
 							<div className='left'>
-								{!image ? (
-									<img src='http://placehold.it/350x350' alt='' />
-								) : (
-									<img src={imageUrl} alt='' />
-								)}
+								{!image ? <img src={placeholder} alt='' /> : <img src={imageUrl} alt='' />}
 							</div>
 							<div className='right'>
 								{!image ? (
