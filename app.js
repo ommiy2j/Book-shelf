@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 	next();
 });
-app.use(helmet());
+
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'images');
