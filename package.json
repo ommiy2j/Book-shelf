@@ -10,6 +10,7 @@
 		"express": "^4.17.1",
 		"express-validator": "^6.10.0",
 		"google-auth-library": "^7.0.3",
+		"helmet": "^4.4.1",
 		"jsonwebtoken": "^8.5.1",
 		"mongoose": "^5.11.19",
 		"multer": "^1.4.2",
@@ -20,7 +21,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon app.js",
 		"build": "cd book-directory && npm run build",
-		"install-client":"cd book-directory && npm install",
+		"install-client": "cd book-directory && npm install",
 		"heroku-postbuild": "npm run install-client && npm run build"
 	},
 	"keywords": [],

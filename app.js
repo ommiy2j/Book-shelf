@@ -9,6 +9,8 @@ const userController = require('./routes/users');
 const multer = require('multer');
 const path = require('path');
 const config = require('config');
+const helmet = require('helmet');
+
 //MongoDb URI
 const MONGODB_URI = config.get('MONGO_DB_URI');
 
@@ -18,7 +20,7 @@ app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 	next();
 });
-
+app.use(helmet());
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'images');
@@ -52,7 +54,6 @@ app.use('/profile', profileRoute);
 app.use('/users', userController);
 
 app.use((err, req, res, next) => {
-	console.log(err.data);
 	const status = err.statusCode || 500;
 	const messege = err.messege || 'Server Error!';
 	const data = err.data;
