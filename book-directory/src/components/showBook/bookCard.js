@@ -11,6 +11,7 @@ const BookCard = (props) => {
 	const [ liked, setLiked ] = useState(0);
 	const [ loading, setLoading ] = useState(false);
 	const { image, bookId, name, author, details } = props;
+	console.log(props)
 	const addlike = (liked) => {
 		setLoading(true);
 		fetch(`https://bookshelf124.herokuapp.com/book/showbooks/bookdetails/liked/${bookId}`, {

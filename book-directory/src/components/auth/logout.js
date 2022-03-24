@@ -1,11 +1,12 @@
 import React from 'react'
+import Aux from '../'
 
-const Logout = () => {
+function logout() {
     return (
         <div>
-            <button onClick={}>Logout</button>
+            
         </div>
     )
 }
 
-export default Logout
+export default logout

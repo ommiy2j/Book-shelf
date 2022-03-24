@@ -76,8 +76,14 @@ if (process.env.NODE_ENV == 'production') {
 const port = process.env.PORT || 8080;
 
 mongoose
-	.connect(MONGODB_URI)
+	.connect(MONGODB_URI, {
+		useNewUrlParser: true,
+		useFindAndModify: false,
+		useUnifiedTopology: true,
+		useCreateIndex: true
+	})
 	.then((result) => {
 		app.listen(port);
+		console.log('connected to db');
 	})
 	.catch((err) => {});

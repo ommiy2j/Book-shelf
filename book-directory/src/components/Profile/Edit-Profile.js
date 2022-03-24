@@ -145,7 +145,7 @@ const EditProfile = (props) => {
 									className='country'
 									value={country}
 									onChange={(e) => setCountry(e)}
-									value={country}
+									
 								/>
 							</div>
 							<div className='input-wrapper'>
